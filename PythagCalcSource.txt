@@ -1,0 +1,38 @@
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.*;
+
+public class TabChange {
+
+	public static void main(String[] args) {
+		JPanel windowContent = new JPanel();
+		new FlowLayout();
+		JLabel label1 = new JLabel("2");
+		JTextField field1 = new JTextField(10);
+		field1.setEditable(false);
+		JLabel label2 = new JLabel("1");
+		JTextField field2 = new JTextField(10);
+		field2.setEditable(false);
+		JButton change = new JButton("Change");
+		windowContent.add(label1);
+		windowContent.add(field1);
+		windowContent.add(label2);
+		windowContent.add(field2);
+		windowContent.add(change);
+		JFrame frame = new JFrame("Test1");
+		frame.setContentPane(windowContent);
+		frame.setSize(450, 100);
+		frame.setVisible(true);
+		JFrame frame2 = new JFrame("Test2");
+		change.addActionListener(new ActionListener() {
+		
+			@Override
+			public void actionPerformed(ActionEvent e) {
+
+			}
+		});
+
+	}
+
+}
